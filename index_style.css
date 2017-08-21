@@ -4,3 +4,7 @@
 .noborder h2 {
   border: none;
 }
+
+.noline h1 {
+  display: none;
+}

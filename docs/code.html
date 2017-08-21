@@ -11,7 +11,7 @@
 
 
 
-<title>書籍内のコードについて</title>
+<title>ベイズ統計モデリング-R,JAGS,Stanによるチュートリアル- 原著第2版 サポートサイト - コードについて</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -189,6 +189,9 @@ $(document).ready(function () {
 <li>
   <a href="code.html">コード</a>
 </li>
+<li>
+  <a href="relate.html">関連情報</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -214,13 +217,61 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">書籍内のコードについて</h1>
-<h4 class="date"><em>最終更新: 2017/08/21</em></h4>
 
 </div>
 
 
-<p>WIP.</p>
+<p>最終更新: 2017/08/22</p>
+<div id="本書で登場するコードおよびデータについて" class="section level2">
+<h2>本書で登場するコードおよびデータについて</h2>
+<div id="ファイルの設置場所" class="section level3">
+<h3>ファイルの設置場所</h3>
+<p>本書で登場するRスクリプト及びデータファイルについては、原典のサポートサイトに設置してあります:</p>
+<p><a href="https://sites.google.com/site/doingbayesiandataanalysis/software-installation">Software, with programs for book - Doing Bayesian Data Analysis</a></p>
+<p>上記リンク先の5.にあるリンク、もしくはページ末にあるところから、<strong>DBDA2Eprograms.zip</strong>という圧縮ファイルをダウンロードし、適宜展開してください。</p>
+</div>
+<div id="スクリプトの使用方法" class="section level3">
+<h3>スクリプトの使用方法</h3>
+<p>本書に詳しく記載してあるので、ぜひ該当箇所を参照してください。不明な点やうまく動かないなどありましたら、遠慮なくお問い合わせください。お問い合わせにつきましては、<a href="about.html#contact">こちら</a>を参考にしてください。</p>
+</div>
+</div>
+<div id="rの使い方について" class="section level2">
+<h2>Rの使い方について</h2>
+<p>本書では、コーディングに関して原典に従って翻訳して記載しています。ただ最近のR界隈を鑑みるに、違和感など感じる読者もいるかと思います。ここでは監訳するにあたって、監訳担当の前田が気になった点について、いくつかコメントを記しておきたいと思います。</p>
+<div id="コーディング規約" class="section level3">
+<h3>コーディング規約</h3>
+<p>本書ではキャメルケースを推奨・採用しており、その理由も書籍内に記述しておりますし、他にもコーディング規約に関する記述がいくつかあります。しかしながらコーディング規約については自分もしくは組織環境に沿ったケースでいいかと思います。</p>
+<p><strong>個人的にはHadley Wickham氏がまとめている<a href="http://style.tidyverse.org/">The tidyverse style guide</a>を参考にすることが多い</strong>です。ぜひ一読されることをおすすめします。</p>
+</div>
+<div id="rstudioの機能について" class="section level3">
+<h3>RStudioの機能について</h3>
+<p>本書ではRを使うのにRStudioを推奨しています。RStudioはRの統合環境として非常に強力で、現在非常に大きなシェアを有しています。また開発も活発で日々新しい機能が追加されたり修正されたりしています。</p>
+<p>しかしながら本書ではRStudioについて十分に説明しきれていないと感じました。そこで最低限このあたりは知っていたほうがいいという機能について、極々簡単に紹介します。なお、以下はこれを執筆している時点(2017/08/21)での安定版である<code>v1.0.143</code>を前提とします。</p>
+<div id="project機能" class="section level4">
+<h4>Project機能</h4>
+<p>RStudioには<strong>Project</strong>という機能があり、一連の処理を行うためにデータやRスクリプトなどをまとめて管理できるという機能があります。このプロジェクトを活用することにより、</p>
+<ul>
+<li>作業ディレクトリがプロジェクトのディレクトリとなる(いちいち気にしなくていい)</li>
+<li>プロジェクトごとに設定が可能</li>
+<li>バージョン管理、ビルド機能などが使える</li>
+</ul>
+<p>などが利用できるようになります。RStudioを利用する上でほぼ必須となる機能です。</p>
+<p>本書を読み進めて行く際には、<strong>ぜひ本書をテストしていくためのProjectを準備</strong>してから進めていくことをおすすめします。プロジェクトの使い方に関しては、本書の3章担当が過去に公開した以下のスライドの終盤を参照してください:</p>
+<p><a href="https://www.slideshare.net/TakashiYamane1/rrstudio">Rの導入とRStudio事始め(改訂版)</a></p>
+</div>
+<div id="コード補完" class="section level4">
+<h4>コード補完</h4>
+<p>RStudioには強力なコード補完機能が備わっており、Tabキーを押すだけで簡単に使えます。特に<strong>本書では非常に似たRスクリプトファイルや関数がたくさんあります</strong>。通常通りのて入力では大変苦労するはずです。そこでコード補完機能により、少しでもその負担を軽減することをおすすめします。コード補完機能については以下の記事に詳しくまとめております:</p>
+<p><a href="http://qiita.com/kazutan/items/4be49fbacb8c3d6c0f44">RStudioのコード補完をもっと使ってみよう - Qiita</a></p>
+</div>
+<div id="各種ボタンの活用" class="section level4">
+<h4>各種ボタンの活用</h4>
+<p>よく「Rはコマンドですべてしないといけないからつらい」と言われます。それはそれで重要なのですが、RStudioには各種様々なボタンやメニューが用意されており、グラフィカルな操作ができます。</p>
+<p>非常に多くのボタンがあるので網羅するのは大変ですが、以下にRStudioが提供するチートシート(pdfファイル)があります。ぜひ一度見てみてはいかがでしょうか:</p>
+<p><a href="https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">RStudio IDE Cheat Sheet</a>(pdfファイル)</p>
+</div>
+</div>
+</div>
 
 <footer>
   <p>本サイト内コンテンツの著作につきましては，<a href="about.html">このサイトについて</a>を参照してください。</p>

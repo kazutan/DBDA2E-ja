@@ -1,10 +1,9 @@
 ---
 title-prefix: "ベイズ統計モデリング-R,JAGS,Stanによるチュートリアル- 原著第2版 サポートサイト"
-pagetitle: "エクササイズ"
+pagetitle: "関連情報"
 output:
   html_document:
     toc: false
 ---
 
 WIP.
-
