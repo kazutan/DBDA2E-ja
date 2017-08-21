@@ -15,7 +15,7 @@ errata_list <- read.csv("data/errata_list_Raw.csv")
 ```
 
 ```{r, echo=FALSE}
-datatable(errata_list,rownames = FALSE,colnames = c("日付", "ページ", "行", "修正前", "修正後"))
+datatable(errata_list,rownames = FALSE,colnames = c("章", "ページ", "行", "修正前", "修正後", "日付"))
 
 ```
 
