@@ -16,13 +16,15 @@ navbar:
 output:
   html_document:
     md_extensions: -ascii_identifiers
-    theme: cosmo
+    theme: flatly
     highliight: textmate
     toc: true
     toc_float:
       collapse: falase
     df_print: "tibble"
     include:
-      after_body: footer.html
+      after_body:
+        - footer.html
+        - showhide.html
     css: site_style.css
 output_dir: "docs"

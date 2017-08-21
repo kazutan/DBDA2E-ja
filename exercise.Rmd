@@ -1,5 +1,9 @@
 ---
 title: "エクササイズ"
+date: "最終更新: `r format(Sys.time(),'%Y/%m/%d')`"
+output:
+  html_document:
+    toc: false
 ---
 
 WIP.

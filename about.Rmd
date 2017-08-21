@@ -1,8 +1,7 @@
 ---
-title: このサイトについて
+date: "最終更新: `r format(Sys.time(),'%Y/%m/%d')`"
 output:
   html_document:
-    md_extensions: -ascii_identifiers
     toc: false
 ---
 
