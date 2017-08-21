@@ -1,5 +1,9 @@
 ---
 title: このサイトについて
+output:
+  html_document:
+    md_extensions: -ascii_identifiers
+    toc: false
 ---
 
 # このサイトについて

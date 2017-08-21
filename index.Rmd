@@ -4,6 +4,7 @@ date: "`r format(Sys.time(),'%Y/%m/%d')`"
 output:
   html_document:
     md_extensions: -ascii_identifiers
+    toc: false
 ---
 
 ```{r setup, include=FALSE}

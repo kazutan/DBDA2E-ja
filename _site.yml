@@ -6,11 +6,16 @@ navbar:
       href: about.html
     - text: "正誤表"
       href: errata.html
+    - text: "エクササイズ"
+      href: exercise.html
+    - text: "コード"
+      href: code.html
   right:
     - icon: fa-github
       href: https://github.com/kazutan/DBDA2E-ja/
 output:
   html_document:
+    md_extensions: -ascii_identifiers
     theme: cosmo
     highliight: textmate
     toc: true
