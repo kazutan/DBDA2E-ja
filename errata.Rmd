@@ -6,5 +6,17 @@ output:
     toc: false
 ---
 
-WIP.
+現在発見されているのは以下のとおりです:
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(DT)
+errata_list <- read.csv("data/errata_list_low.csv")
+```
+
+```{r, echo=FALSE}
+datatable(errata_list,rownames = FALSE,colnames = c("日付", "ページ", "行", "修正前", "修正後"))
+
+```
+
 
