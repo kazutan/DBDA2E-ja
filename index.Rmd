@@ -12,17 +12,49 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
+**最終更新: `r format(Sys.time(),'%Y/%m/%d')` **
+
 # Welcome!
 
-# {.row}
+こちらは、共立出版より発売された「[ベイズ統計モデリング-R,JAGS,Stanによるチュートリアル- 原著第2版](http://www.kyoritsu-pub.co.jp/bookdetail/9784320113169)」のサポートサイトです。このリンク先に本書の目次および第1章のpdfファイルへのリンクがあります。
 
-## contents{.col-md-8}
+この本は、「[Doing Bayesian Data Analysis 2nd Edition - A Tutorial with R, JAGS, and Stan](https://sites.google.com/site/doingbayesiandataanalysis/)」の日本語版となります。
 
 ### 最新情報
 
-**最終更新: `r format(Sys.time(),'%Y/%m/%d')` **
+- サイトオープン(2017/08/21)
 
-WIP.
+**このサイトは順次コンテンツを追加していきます**。最新更新情報はTwitterの[#犬4匹本](https://twitter.com/search?q=%23%E7%8A%AC4%E5%8C%B9%E6%9C%AC)のハッシュタグをつけて配信いたしますので、そちらをチェックされるとスムーズです。
+
+# {.row .noline}
+
+## Contents{.col-md-8}
+
+### [このサイトについて](about.html)
+
+このサポートサイトに関する説明があります。**はじめに読むこと!**
+
+### [正誤表](errata.html)
+
+現時点で把握している誤字脱字や誤訳などについてまとめています。本書をお読みになって気になる点がございましたら、まずこちらを参照していただき、該当するものがなければお手数ですが[お問い合わせ](about.html#contact)いただくと助かります。
+
+### [エクササイズ(準備中)](exercise.html)
+
+本書の章末についているエクササイズに関する情報を提供する予定です。もうしばらくお待ちください。
+
+### [コード](code.html)
+
+本書で使用するRコードなどへのリンク、およびRやRStudioに関する補足をまとめています。
+
+### [関連情報(準備中)](relate.html)
+
+本書に関連する情報をまとめています:
+
+- 本書を紹介した記事
+- 本書に関連しそうなイベント
+- その他関連する情報 etc...
+
+もしこれらに関して情報をお持ちの方は、お知らせいただけると助かります。
 
 ## SNS{.col-md-4}
 
