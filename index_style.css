@@ -1,3 +1,6 @@
 /* for index.Rmd */
 @import url("site_style.css");
 
+.noborder h2 {
+  border: none;
+}
