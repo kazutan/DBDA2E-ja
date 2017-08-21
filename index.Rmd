@@ -1,0 +1,15 @@
+---
+title: "index"
+date: "`r format(Sys.time(),'%Y/%m/%d')`"
+output:
+  html_document:
+    md_extensions: -ascii_identifiers
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+WIP.
+

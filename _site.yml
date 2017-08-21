@@ -1,0 +1,23 @@
+name: "site name"
+navbar: 
+  title: "site title"
+  left:
+    - text: "about"
+      href: about.html
+    - text: "正誤表"
+      href: errata.html
+  right:
+    - icon: fa-github
+      href: https://github.com/kazutan/DBDA2E-ja/
+output:
+  html_document:
+    theme: cosmo
+    highliight: textmate
+    toc: true
+    toc_float:
+      collapse: falase
+    df_print: "tibble"
+    include:
+      after_body: footer.html
+    css: site_style.css
+output_dir: "docs"
