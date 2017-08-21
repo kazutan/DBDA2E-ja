@@ -11,7 +11,7 @@ output:
 ```{r setup, include=FALSE}
 library(dplyr)
 library(DT)
-errata_list <- read.csv("data/errata_list_low.csv")
+errata_list <- read.csv("data/errata_list_Raw.csv")
 ```
 
 ```{r, echo=FALSE}
