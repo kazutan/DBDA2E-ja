@@ -29,9 +29,11 @@ output:
     df_print: "tibble"
     include:
       before_body:
-        - head.html
+        - partial/head.html
       after_body:
-        - footer.html
-        - showhide.html
-    css: site_style.css
+        - partial/footer.html
+        - plugins/showhide.html
+    css: css/site_style.css
 output_dir: "docs"
+exclude:
+  - "data"
