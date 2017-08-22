@@ -6,4 +6,12 @@ output:
     toc: false
 ---
 
-WIP.
+
+### ブログ記事
+
++ 出版に当たって監訳者のひとり，小杉(@kosugitti)が紹介文を寄稿した[ブログ記事がこちら](http://kosugitti.net/archives/5958)
+
+
+### スライドなど
+
++ WIP.
