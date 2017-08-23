@@ -224,22 +224,18 @@ $(document).ready(function () {
 <style type="text/css">
 .panel {
   margin-left: 25px;
-  margin-right: 150px;
+  margin-right: 15px;
 }
 </style>
 <div id="関連情報" class="section level1 tabset">
 <h1>関連情報</h1>
 <p>こちらでは、本書に関連した情報を紹介していきます。最新トピック3件はこちらです:</p>
 <ul>
-<li>監訳者のひとり，小杉(<span class="citation">@kosugitti</span>)が紹介文を寄稿した<a href="http://kosugitti.net/archives/5958">ブログ記事がこちら</a></li>
+<li><strong>2017/7/22</strong> 監訳者のひとり，小杉(<span class="citation">@kosugitti</span>)が紹介文を寄稿した<a href="http://kosugitti.net/archives/5958">ブログ記事がこちら</a></li>
 </ul>
-<div id="イベント関連" class="section level2">
-<h2>イベント関連</h2>
-<p>WIP.</p>
-</div>
 <div id="紹介記事" class="section level2">
 <h2>紹介記事</h2>
-<p>こちらは，本書を紹介する</p>
+<p>こちらは，本書を紹介する記事を紹介いたします。</p>
 <div id="ブログ記事" class="section level4 panel panel-info">
 <h4>2017/7/22 ブログ記事</h4>
 <p>出版に当たって監訳者のひとり，小杉(<span class="citation">@kosugitti</span>)が紹介文を寄稿しました。<a href="http://kosugitti.net/archives/5958">ブログ記事がこちら</a></p>
@@ -248,12 +244,36 @@ $(document).ready(function () {
 <h4></h4>
 </div>
 </div>
+<div id="イベント関連" class="section level2">
+<h2>イベント関連</h2>
+<p>WIP.</p>
+</div>
 <div id="その他" class="section level2">
 <h2>その他</h2>
 <p>WIP.</p>
 </div>
 </div>
 
+<footer>
+  <p>本サイト内コンテンツの著作につきましては，<a href="about.html">このサイトについて</a>を参照してください。</p>
+</footer>
+<script>
+$(function(){
+  $(".showhide").hide();
+  $(".showhide").before("<button type='button' class='btn btn-primary showhideBtn'></button>")
+  $(".showhideBtn").text("Show");
+  $(".showhideBtn").click(function(){
+    var index = $(".showhideBtn").index(this);
+    if($(".showhide").eq(index).is(":visible")){
+      $(".showhide").eq(index).hide();
+      $(".showhideBtn").eq(index).text("Show");
+    }else{
+      $(".showhide").eq(index).show();
+      $(".showhideBtn").eq(index).text("Hide");
+    };
+  });
+});
+</script>
 <script>
   $(function(){
     $(".panel").addClass("panel-default");
