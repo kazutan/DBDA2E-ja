@@ -1,0 +1,15 @@
+<script>
+  $(function(){
+    $(".panel").addClass("panel-default");
+    $(".panel").each(function(){
+      $(this).children().eq(0).replaceWith(function(){
+        $(this).replaceWith("<div class=panel-heading>"+$(this).text()+"</div>");
+      });
+      $(this).children("*:not('.panel-heading')").wrapAll("<div class=panel-body />");
+    });
+    $(".panel-end").each(function(){
+      $(this).children().eq(0).remove();
+      $(this).children().unwrap();
+    });
+  });
+</script>

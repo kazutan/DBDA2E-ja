@@ -221,38 +221,53 @@ $(document).ready(function () {
 </div>
 
 
-<div id="ブログ記事" class="section level3">
-<h3>ブログ記事</h3>
+<style type="text/css">
+.panel {
+  margin-left: 25px;
+  margin-right: 150px;
+}
+</style>
+<div id="関連情報" class="section level1 tabset">
+<h1>関連情報</h1>
+<p>こちらでは、本書に関連した情報を紹介していきます。最新トピック3件はこちらです:</p>
 <ul>
-<li>出版に当たって監訳者のひとり，小杉(<span class="citation">@kosugitti</span>)が紹介文を寄稿した<a href="http://kosugitti.net/archives/5958">ブログ記事がこちら</a></li>
+<li>監訳者のひとり，小杉(<span class="citation">@kosugitti</span>)が紹介文を寄稿した<a href="http://kosugitti.net/archives/5958">ブログ記事がこちら</a></li>
 </ul>
+<div id="イベント関連" class="section level2">
+<h2>イベント関連</h2>
+<p>WIP.</p>
 </div>
-<div id="スライドなど" class="section level3">
-<h3>スライドなど</h3>
-<ul>
-<li>WIP.</li>
-</ul>
+<div id="紹介記事" class="section level2">
+<h2>紹介記事</h2>
+<p>こちらは，本書を紹介する</p>
+<div id="ブログ記事" class="section level4 panel panel-info">
+<h4>2017/7/22 ブログ記事</h4>
+<p>出版に当たって監訳者のひとり，小杉(<span class="citation">@kosugitti</span>)が紹介文を寄稿しました。<a href="http://kosugitti.net/archives/5958">ブログ記事がこちら</a></p>
+</div>
+<div id="section" class="section level4 panel-end">
+<h4></h4>
+</div>
+</div>
+<div id="その他" class="section level2">
+<h2>その他</h2>
+<p>WIP.</p>
+</div>
 </div>
 
-<footer>
-  <p>本サイト内コンテンツの著作につきましては，<a href="about.html">このサイトについて</a>を参照してください。</p>
-</footer>
 <script>
-$(function(){
-  $(".showhide").hide();
-  $(".showhide").before("<button type='button' class='btn btn-primary showhideBtn'></button>")
-  $(".showhideBtn").text("Show");
-  $(".showhideBtn").click(function(){
-    var index = $(".showhideBtn").index(this);
-    if($(".showhide").eq(index).is(":visible")){
-      $(".showhide").eq(index).hide();
-      $(".showhideBtn").eq(index).text("Show");
-    }else{
-      $(".showhide").eq(index).show();
-      $(".showhideBtn").eq(index).text("Hide");
-    };
+  $(function(){
+    $(".panel").addClass("panel-default");
+    $(".panel").each(function(){
+      $(this).children().eq(0).replaceWith(function(){
+        $(this).replaceWith("<div class=panel-heading>"+$(this).text()+"</div>");
+      });
+      $(this).children("*:not('.panel-heading')").wrapAll("<div class=panel-body />");
+    });
+    $(".panel-end").each(function(){
+      $(this).children().eq(0).remove();
+      $(this).children().unwrap();
+    });
   });
-});
 </script>
 
 
