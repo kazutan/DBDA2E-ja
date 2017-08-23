@@ -4,15 +4,12 @@ pagetitle: "関連情報"
 output:
   html_document:
     toc: false
-    include:
-      after_body:
-        - plugins/bs_panel.html
 ---
 
 ```{css, echo=FALSE}
 .panel {
   margin-left: 25px;
-  margin-right: 150px;
+  margin-right: 15px;
 }
 ```
 
@@ -23,19 +20,20 @@ output:
 
 - **2017/7/22** 監訳者のひとり，小杉(@kosugitti)が紹介文を寄稿した[ブログ記事がこちら](http://kosugitti.net/archives/5958)
 
-## イベント関連
-
-WIP.
-
 ## 紹介記事
 
-こちらは，本書を紹介する
+こちらは，本書を紹介する記事を紹介いたします。
 
 #### 2017/7/22 ブログ記事 {.panel .panel-info}
 
 出版に当たって監訳者のひとり，小杉(@kosugitti)が紹介文を寄稿しました。[ブログ記事がこちら](http://kosugitti.net/archives/5958)
 
 #### {.panel-end}
+
+
+## イベント関連
+
+WIP.
 
 ## その他
 

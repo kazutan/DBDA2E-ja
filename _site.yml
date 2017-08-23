@@ -33,6 +33,7 @@ output:
       after_body:
         - partial/footer.html
         - plugins/showhide.html
+        - plugins/bs_panel.html
     css: css/site_style.css
 output_dir: "docs"
 exclude:
