@@ -4,6 +4,7 @@ pagetitle: "第81回日本心理学会TWSベイジアンデータ解析入門サ
 output:
   html_document:
     toc: false
+output_dir: "../docs/JPA2017"
 ---
 
 ## はじめに
