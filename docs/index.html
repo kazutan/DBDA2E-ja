@@ -67,7 +67,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="index_style.css" type="text/css" />
+<link rel="stylesheet" href="css/index_style.css" type="text/css" />
 
 </head>
 
@@ -211,7 +211,7 @@ $(document).ready(function () {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-<img src="pics/topbanner.png" alt="" />
+<img src="https://kazutan.github.io/DBDA2E-ja/pics/topbanner.png" alt="" />
 
 <div class="fluid-row" id="header">
 
@@ -229,6 +229,7 @@ $(document).ready(function () {
 <div id="最新情報" class="section level3">
 <h3>最新情報</h3>
 <ul>
+<li>「関連情報」に1件追加(2017/08/23)</li>
 <li>サイトオープン(2017/08/21)</li>
 </ul>
 <p><strong>このサイトは順次コンテンツを追加していきます</strong>。最新更新情報はTwitterの<a href="https://twitter.com/search?q=%23%E7%8A%AC4%E5%8C%B9%E6%9C%AC">#犬4匹本</a>のハッシュタグをつけて配信いたしますので、そちらをチェックされるとスムーズです。</p>
@@ -254,8 +255,8 @@ $(document).ready(function () {
 <h3><a href="code.html">コード</a></h3>
 <p>本書で使用するRコードなどへのリンク、およびRやRStudioに関する補足をまとめています。</p>
 </div>
-<div id="関連情報準備中" class="section level3">
-<h3><a href="relate.html">関連情報(準備中)</a></h3>
+<div id="関連情報" class="section level3">
+<h3><a href="relate.html">関連情報</a></h3>
 <p>本書に関連する情報をまとめています:</p>
 <ul>
 <li>本書を紹介した記事</li>
@@ -273,7 +274,7 @@ $(document).ready(function () {
 </div>
 
 <footer>
-  <p>本サイト内コンテンツの著作につきましては，<a href="about.html">このサイトについて</a>を参照してください。</p>
+  <p>本サイト内コンテンツの著作につきましては，<a href="https://kazutan.github.io/DBDA2E-ja/about.html">このサイトについて</a>を参照してください。</p>
 </footer>
 <script>
 $(function(){
@@ -291,6 +292,21 @@ $(function(){
     };
   });
 });
+</script>
+<script>
+  $(function(){
+    $(".panel").addClass("panel-default");
+    $(".panel").each(function(){
+      $(this).children().eq(0).replaceWith(function(){
+        $(this).replaceWith("<div class=panel-heading>"+$(this).text()+"</div>");
+      });
+      $(this).children("*:not('.panel-heading')").wrapAll("<div class=panel-body />");
+    });
+    $(".panel-end").each(function(){
+      $(this).children().eq(0).remove();
+      $(this).children().unwrap();
+    });
+  });
 </script>
 
 

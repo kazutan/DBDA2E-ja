@@ -67,7 +67,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="site_style.css" type="text/css" />
+<link rel="stylesheet" href="css/site_style.css" type="text/css" />
 
 </head>
 
@@ -211,7 +211,7 @@ $(document).ready(function () {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-<img src="pics/topbanner.png" alt="" />
+<img src="https://kazutan.github.io/DBDA2E-ja/pics/topbanner.png" alt="" />
 
 <div class="fluid-row" id="header">
 
@@ -274,7 +274,7 @@ $(document).ready(function () {
 </div>
 
 <footer>
-  <p>本サイト内コンテンツの著作につきましては，<a href="about.html">このサイトについて</a>を参照してください。</p>
+  <p>本サイト内コンテンツの著作につきましては，<a href="https://kazutan.github.io/DBDA2E-ja/about.html">このサイトについて</a>を参照してください。</p>
 </footer>
 <script>
 $(function(){
@@ -292,6 +292,21 @@ $(function(){
     };
   });
 });
+</script>
+<script>
+  $(function(){
+    $(".panel").addClass("panel-default");
+    $(".panel").each(function(){
+      $(this).children().eq(0).replaceWith(function(){
+        $(this).replaceWith("<div class=panel-heading>"+$(this).text()+"</div>");
+      });
+      $(this).children("*:not('.panel-heading')").wrapAll("<div class=panel-body />");
+    });
+    $(".panel-end").each(function(){
+      $(this).children().eq(0).remove();
+      $(this).children().unwrap();
+    });
+  });
 </script>
 
 

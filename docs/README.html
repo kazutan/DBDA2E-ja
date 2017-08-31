@@ -69,7 +69,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="site_style.css" type="text/css" />
+<link rel="stylesheet" href="css/site_style.css" type="text/css" />
 
 </head>
 
@@ -308,7 +308,7 @@ div.tocify {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-<img src="pics/topbanner.png" alt="" />
+<img src="https://kazutan.github.io/DBDA2E-ja/pics/topbanner.png" alt="" />
 
 <div class="fluid-row" id="header">
 
@@ -320,13 +320,88 @@ div.tocify {
 
 <div id="ベイズ統計モデリングrjagsstanによるチュートリアル-原著第2版サポートサイト用リポジトリ" class="section level1">
 <h1>「ベイズ統計モデリング―R,JAGS,Stanによるチュートリアル― 原著第2版」　サポートサイト用リポジトリ</h1>
-<p>WIP.</p>
-<p>出版社の書籍紹介ページはこちら:</p>
-<p><a href="http://www.kyoritsu-pub.co.jp/bookdetail/9784320113169" class="uri">http://www.kyoritsu-pub.co.jp/bookdetail/9784320113169</a></p>
+<p>こちらは、共立出版より発売された「<a href="http://www.kyoritsu-pub.co.jp/bookdetail/9784320113169">ベイズ統計モデリング-R,JAGS,Stanによるチュートリアル- 原著第2版</a>」のサポートサイトを設置しているリポジトリです。このリンク先に本書の目次および第1章のpdfファイルへのリンクがあります。この本は、「<a href="https://sites.google.com/site/doingbayesiandataanalysis/">Doing Bayesian Data Analysis 2nd Edition - A Tutorial with R, JAGS, and Stan</a>」の日本語版となります。</p>
+<p>なお，サポートサイト自体は，以下のurlへ進んでください:</p>
+<p><a href="https://kazutan.github.io/DBDA2E-ja" class="uri">https://kazutan.github.io/DBDA2E-ja</a></p>
+<p>このREADMEには運用などについてまとめています。</p>
+<div id="このリポジトリの構成について" class="section level2">
+<h2>このリポジトリの構成について</h2>
+<div id="rmdファイル" class="section level3">
+<h3><code>*.Rmd</code>ファイル</h3>
+<p>各ページのメインとなる部分です。現時点では以下のファイルがあります:</p>
+<ul>
+<li><code>index.Rmd</code>: トップページ</li>
+<li><code>about.Rmd</code>: 「このサイトについて」のページ</li>
+<li><code>errata.Rmd</code>: 「正誤表」のページ</li>
+<li><code>exercise.Rmd</code>: 「エクササイズ」のページ</li>
+<li><code>code.Rmd</code>: 「コード」のページ</li>
+<li><code>relate.Rmd</code>: 「関連情報」のページ</li>
+</ul>
+</div>
+<div id="site.ymlファイル" class="section level3">
+<h3><code>_site.yml</code>ファイル</h3>
+<p>サイト設定ファイルです。記述方法などについてはR Markdown公式サイトの<a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">こちらのページ</a>を参照してください。</p>
+</div>
+<div id="docsディレクトリ" class="section level3">
+<h3><code>docs/</code>ディレクトリ</h3>
+<p>サイト公開用に設定しているディレクトリです。この内容はRStudioのBuildで自動生成させますので，手作業による変更はしないでください(してもすぐ消し飛びます)。</p>
+</div>
+<div id="dataディレクトリ" class="section level3">
+<h3><code>data/</code>ディレクトリ</h3>
+<p>正誤表のためのデータ(csv)などを設置しています。ここのデータをRmdで読み取って表などを自動生成しますので，追加などはここのデータをいじります。</p>
+</div>
+<div id="picsディレクトリ" class="section level3">
+<h3><code>pics/</code>ディレクトリ</h3>
+<p>Webページ内にて利用する画像ファイルを設置しています。Rmdファイルなどで画像を参照させたいときは，このディレクトリに画像ファイルを置いて，<code>pics/hoge.png</code>といったパスで呼び出してください。</p>
+</div>
+<div id="pluginsディレクトリ" class="section level3">
+<h3><code>plugins/</code>ディレクトリ</h3>
+<p>Webサイト内で使っているプラグインです。内容を把握してない方はそっとしておいてください。</p>
+</div>
+<div id="cssディレクトリ" class="section level3">
+<h3><code>css/</code>ディレクトリ</h3>
+<p>Webサイト内で使っているcssファイルを設置しています。</p>
+</div>
+<div id="partialディレクトリ" class="section level3">
+<h3><code>partial/</code>ディレクトリ</h3>
+<p>ヘッダー部分やフッター部分で使っているhtmlファイルを設置しています。</p>
+</div>
+<div id="その他のファイル" class="section level3">
+<h3>その他のファイル</h3>
+<p><code>README.md</code>はリポジトリの説明ファイル(このドキュメント)で，それ以外はそっとしておいてください。</p>
+</div>
+</div>
+<div id="運用について" class="section level2">
+<h2>運用について</h2>
+<p>masterへのPushは禁止とし，プルリク駆動とします。<strong>どなたからでもプルリクは受け付けます</strong>が，レビューによっては修正をお願いすることがあることをご了承ください。</p>
+<p>以下，編集方法について説明します。</p>
+<div id="正誤表への追加修正について" class="section level3">
+<h3>正誤表への追加・修正について</h3>
+<ol style="list-style-type: decimal">
+<li><code>data/errata_list_Raw.csv</code>ファイルを開き，内容を追加・修正して保存</li>
+<li><code>errata.Rmd</code>を開き，Knitを実行して変更を確認(自動で読み込んで表にします)</li>
+<li>問題がなければcommitしてpushしてプルリクを投げてください</li>
+</ol>
+<p>プルリクの内容を確認し，問題がなければそのままmergeします。その後に管理側で更新情報を追記して<code>Build Website</code>を行います。</p>
+</div>
+<div id="その他の内容の追加修正について" class="section level3">
+<h3>その他の内容の追加・修正について</h3>
+<ol style="list-style-type: decimal">
+<li>該当するRmdファイルを開き，編集</li>
+<li>保存してknitを実行して変更を確認</li>
+<li>問題がなければcommitしてpushしてプルリクを投げてください</li>
+</ol>
+<p>プルリクの内容を確認し，問題がなければそのままmergeします。その後に管理側で更新情報を追記して<code>Build Website</code>を行います。</p>
+</div>
+<div id="サイト設定などの追加修正について" class="section level3">
+<h3>サイト設定などの追加・修正について</h3>
+<p>要望や指摘についてはissueへお願いします。もしこれらの設定を含むプルリクが挙がった場合，対応には時間がかかることをご了承ください。</p>
+</div>
+</div>
 </div>
 
 <footer>
-  <p>本サイト内コンテンツの著作につきましては，<a href="about.html">このサイトについて</a>を参照してください。</p>
+  <p>本サイト内コンテンツの著作につきましては，<a href="https://kazutan.github.io/DBDA2E-ja/about.html">このサイトについて</a>を参照してください。</p>
 </footer>
 <script>
 $(function(){
@@ -344,6 +419,21 @@ $(function(){
     };
   });
 });
+</script>
+<script>
+  $(function(){
+    $(".panel").addClass("panel-default");
+    $(".panel").each(function(){
+      $(this).children().eq(0).replaceWith(function(){
+        $(this).replaceWith("<div class=panel-heading>"+$(this).text()+"</div>");
+      });
+      $(this).children("*:not('.panel-heading')").wrapAll("<div class=panel-body />");
+    });
+    $(".panel-end").each(function(){
+      $(this).children().eq(0).remove();
+      $(this).children().unwrap();
+    });
+  });
 </script>
 
 

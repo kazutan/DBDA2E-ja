@@ -4,7 +4,7 @@ pagetitle: "Welcome!"
 output:
   html_document:
     toc: false
-    css: index_style.css
+    css: css/index_style.css
 ---
 
 ```{r setup, include=FALSE}
@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### 最新情報
 
+- 「関連情報」に1件追加(2017/08/23)
 - サイトオープン(2017/08/21)
 
 **このサイトは順次コンテンツを追加していきます**。最新更新情報はTwitterの[#犬4匹本](https://twitter.com/search?q=%23%E7%8A%AC4%E5%8C%B9%E6%9C%AC)のハッシュタグをつけて配信いたしますので、そちらをチェックされるとスムーズです。
@@ -46,7 +47,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 本書で使用するRコードなどへのリンク、およびRやRStudioに関する補足をまとめています。
 
-### [関連情報(準備中)](relate.html)
+### [関連情報](relate.html)
 
 本書に関連する情報をまとめています:
 
