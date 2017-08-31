@@ -10,6 +10,7 @@ output:
 .panel {
   margin-left: 25px;
   margin-right: 15px;
+  max-width: 800px;
 }
 ```
 
