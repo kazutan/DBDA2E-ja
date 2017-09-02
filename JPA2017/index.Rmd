@@ -16,8 +16,8 @@ output_dir: "../docs/JPA2017"
 ## ベイジアンになると何がどう変わるのか
 
 + 講師：小杉考司（山口大学教育学部）
-+ [投影資料(PDF)]
-+ [実行するRコードなど(zip)]
++ [投影資料(PDF)](kosugitti/kosugitti.pdf)
++ [実行するRコードなど(zip)](kosugitti/kosugitti.zip)
 
 ## 回帰分析とか（仮）
 

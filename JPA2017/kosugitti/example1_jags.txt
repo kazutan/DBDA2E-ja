@@ -1,0 +1,12 @@
+model{
+  # likelihood
+  for(i in 1:N){
+    X1[i] ~ dnorm(muA,sig)
+    X2[i] ~ dnorm(muB,sig)
+  }
+  # prior
+  muA ~ dnorm(0,1.0e-4)
+  muB ~ dnorm(0,1.0e-4)
+  sig <- pow(sigma,-2)
+  sigma ~ dt(0,1,1)T(0,)
+}
