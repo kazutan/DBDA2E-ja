@@ -5,8 +5,8 @@ model{
     X2[i] ~ dnorm(muB,sig2)
   }
   # prior
-  muA ~ dnorm(0,1.0e-4)
-  muB ~ dnorm(0,1.0e-4)
+  muA ~ dunif(-100,100)
+  muB ~ dunif(-100,100)
   sig1 <- pow(sigma1,-2)
   sigma1 ~ dt(0,1,1)T(0,)
   sig2 <- pow(sigma2,-2)
