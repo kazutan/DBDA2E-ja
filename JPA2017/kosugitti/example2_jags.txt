@@ -1,4 +1,4 @@
-model{
+  model{
   # likelihood
   for(i in 1:N){
     X1[i] ~ dnorm(muA,sig1)
