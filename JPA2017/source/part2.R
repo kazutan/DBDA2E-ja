@@ -18,7 +18,7 @@ dataSet <- list(N=N,X1=X1,X2=X2)
 # JAGSによる推定
 library(runjags) # ライブラリの読み込み
 runJagsOut <- run.jags(method="parallel",
-                       model="JPA2017/kosugitti/example1_jags.txt",
+                       model="JPA2017/source/example1_jags.txt",
                        monitor=c("muA","muB","sigma"),
                        data=dataSet,
                        n.chains=4,
@@ -32,7 +32,7 @@ runJagsOut
 # Stanによる推定
 library(rstan)
 rstan_options(auto_write = TRUE)
-model1 <- stan_model("JPA2017/kosugitti/example1.stan") 
+model1 <- stan_model("JPA2017/source/example1.stan") 
 stanModelFit <- sampling(model1,data=dataSet,chains=4,warmup=1000,iter=10000)
 
 # 結果の出力
@@ -45,7 +45,7 @@ plot(stanModelFit,show_density=T,pars=c("muA","muB"))
 JagsSample <-  as.data.frame(as.matrix(runJagsOut$mcmc))
 JagsSample$diff <- JagsSample$muA - JagsSample$muB
 ## Stanの場合
-model1a <- stan_model("JPA2017/kosugitti/example1a.stan")
+model1a <- stan_model("JPA2017/source/example1a.stan")
 stanModelFit1a <- sampling(model1a,data=dataSet,chains=4,warmup=1000,iter=10000)
 plot(stanModelFit1a,show_density=T,pars="diff")
 
@@ -67,7 +67,7 @@ t.test(X1,X2,var.equal = F)
 dataSet <- list(N=N,X1=X1,X2=X2)
 # JAGSによる推定
 runJagsOut <- run.jags(method="parallel",
-                       model="JPA2017/kosugitti/example2_jags.txt",
+                       model="JPA2017/source/example2_jags.txt",
                        monitor=c("muA","muB","sigma"),
                        data=dataSet,
                        n.chains=4,
@@ -79,6 +79,6 @@ runJagsOut <- run.jags(method="parallel",
 runJagsOut
 
 # Stanによる推定
-model2 <- stan_model("JPA2017/kosugitti/example2.stan") 
+model2 <- stan_model("JPA2017/source/example2.stan") 
 stanModelFit2 <- sampling(model2,data=dataSet,chains=4,warmup=1000,iter=10000)
 stanModelFit2
