@@ -40,5 +40,4 @@ output:
         - ../plugins/bs_panel.html
     css: ../css/site_style.css
 output_dir: "../docs/JPA2017"
-#exclude:
-#  - "data"
+exclude: ["source/", "slides/part2_slide.pdf", "slides/part3_slide.pdf"]
