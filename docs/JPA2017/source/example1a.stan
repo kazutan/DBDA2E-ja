@@ -18,7 +18,11 @@ model{
   }
   // prior
   sig ~ student_t(4,0,5);
-  muA ~ normal(0,1000);
-  muB ~ normal(0,1000);
+  muA ~ uniform(-100,100);
+  muB ~ uniform(-100,100);
 }
 
+generated quantities{
+  real diff;
+  diff = muA - muB;
+}
