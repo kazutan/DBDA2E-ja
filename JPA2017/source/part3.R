@@ -33,6 +33,18 @@ fit<-sampling(model,
               seed=123)
 fit
 
+#JAGSの場合
+# library(runjags) # ライブラリの読み込み
+# runJagsOut <- run.jags(method="parallel",
+#                        model="JPA2017/source/example3_jags.txt",
+#                        monitor=c("beta0","beta1","sigma"),
+#                        data=data,
+#                        n.chains=4,
+#                        adapt=1000,
+#                        burnin=1000,
+#                        sample=10000,
+#                        summarise=TRUE)
+
 
 #収束診断---------------
 ##トレースプロット

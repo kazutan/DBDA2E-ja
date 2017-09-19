@@ -1,0 +1,10 @@
+model{
+  for(n in 1:N){
+    mu[n] = beta0+beta1*x[n];
+    y[n] ~ dnorm(mu[n], sig);
+  }
+  beta0 ~ dnorm(0, 100);
+  beta1 ~ dnorm(0, 100);
+  sig <- pow(sigma,-2)
+  sigma ~ dt(0,1,1)T(0,)
+}
