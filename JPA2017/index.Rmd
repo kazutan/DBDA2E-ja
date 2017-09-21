@@ -7,12 +7,17 @@ output:
 output_dir: "../docs/JPA2017"
 ---
 
-# 第81回日本心理学会TWSベイジアンデータ解析入門サポートサイト
+# 第81回日本心理学会TWS 「ベイジアンデータ解析入門」<br />サポートサイト
 
 ## はじめに
 
 + 講師：前田和寛（比治山大学短期大学部）
-+ [投影資料(PDF)](slides/part1_slide.pdf)
++ [投影資料(htmlスライド)](slides/part1_slide.html)
+
+```{r, echo=FALSE}
+knitr::include_url("slides/part1_slide.html")
+```
+
 
 
 ## Part2:ベイジアンになると何がどう変わるのか
