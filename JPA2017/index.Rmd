@@ -19,6 +19,7 @@ output_dir: "../docs/JPA2017"
 
 + 講師：小杉考司（山口大学教育学部）
 + [投影資料(PDF)](slides/part2_slide.pdf)
++ [実行するためのRコード](part2.R)
 + [Stanコード；二群の平均値の推定（等分散）](source/example1.stan)
 + [Stanコード；二群の平均値の推定（等分散+差の分布）](source/example1a.stan)
 + [Stanコード；二群の平均値の推定（異分散）](source/example2.stan)
@@ -29,6 +30,7 @@ output_dir: "../docs/JPA2017"
 
 + 講師：平川真（広島大学教育学研究科）
 + [投影資料(PDF)](slides/part3_slide.pdf)
++ [実行するためのRコード](part3.R)
 + [Stanコード；回帰分析のコード](source/example3.stan)
 + [JAGSコード；回帰分析のコード](source/example3_jags.txt)
 
